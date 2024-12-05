@@ -1,0 +1,54 @@
+<!-- src/app/components/configuration-form/configuration-form.component.html -->
+<h2>Configure Ticketing System</h2>
+
+<div class="form-group">
+  <label>Configuration Name:</label>
+  <input type="text" [(ngModel)]="name" required />
+</div>
+<div class="form-group">
+  <label>Total Tickets:</label>
+  <input type="number" [(ngModel)]="totalTickets" required />
+</div>
+<div class="form-group">
+  <label>Ticket Release Rate:</label>
+  <input type="number" [(ngModel)]="ticketReleaseRate" required />
+</div>
+<div class="form-group">
+  <label>Customer Retrieval Rate:</label>
+  <input type="number" [(ngModel)]="customerRetrievalRate" required />
+</div>
+<div class="form-group">
+  <label>Maximum Ticket Capacity:</label>
+  <input type="number" [(ngModel)]="maxTicketCapacity" required />
+</div>
+<div class="button-group">
+  <button (click)="configureTicketingSystem()">Configure</button>
+  <button (click)="saveConfiguration()">Save Configuration</button>
+</div>
+
+<h3>Saved Configurations</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Total Tickets</th>
+      <th>Ticket Release Rate</th>
+      <th>Customer Retrieval Rate</th>
+      <th>Max Ticket Capacity</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let config of savedConfigurations">
+      <td>{{ config.name }}</td>
+      <td>{{ config.totalTickets }}</td>
+      <td>{{ config.ticketReleaseRate }}</td>
+      <td>{{ config.customerRetrievalRate }}</td>
+      <td>{{ config.maxTicketCapacity }}</td>
+      <td>
+        <button (click)="selectConfiguration(config)">Select</button>
+        <button (click)="deleteConfiguration(config)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

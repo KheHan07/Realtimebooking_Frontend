@@ -1,0 +1,10 @@
+<!-- src/app/components/web-socket-window/web-socket-window.component.html -->
+<div class="websocket-window">
+    <h3>Live Ticket Updates</h3>
+    <div class="live-data-container" #liveDataContainer>
+      <ul>
+        <li *ngFor="let data of liveData">{{ data }}</li>
+      </ul>
+    </div>
+  </div>
+  

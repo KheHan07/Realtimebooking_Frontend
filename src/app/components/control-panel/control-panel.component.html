@@ -1,0 +1,18 @@
+<!-- src/app/components/control-panel/control-panel.component.html -->
+<h2 class="control-panel-title">Control Panel</h2>
+<div class="form-group">
+  <label>Number of Vendors:</label>
+  <input type="number" [(ngModel)]="numberOfVendors" required />
+</div>
+<div class="form-group">
+  <label>Number of Buyers:</label>
+  <input type="number" [(ngModel)]="numberOfBuyers" required />
+</div>
+<div class="button-group">
+  <button (click)="setVendorsAndBuyers()">Set Vendors and Buyers</button>
+  <button (click)="startSystem()">Start System</button>
+  <button (click)="stopSystem()">Stop System</button>
+</div>
+
+<!-- Include the WebSocketWindowComponent -->
+<app-web-socket-window></app-web-socket-window>

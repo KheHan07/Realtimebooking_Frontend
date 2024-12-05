@@ -1,0 +1,150 @@
+/* General styling for h2 element */
+h2 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 28px;
+    color: #353535; /* Matches the overall color scheme */
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+/* Container for form elements */
+div {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form labels */
+label {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 17px;
+    color: #353535;
+    margin-right: 5px;
+    width: 214px; /* Ensures alignment between labels */
+    display: inline-block;
+}
+
+/* Form inputs */
+input[type="text"],
+input[type="number"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 2px solid #00bcd4; /* Border color for visual emphasis */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 200px; /* Consistent width for input fields */
+}
+
+/* Highlight the input fields on focus */
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #008c9e; /* Darker border color when focused */
+}
+
+/* Form buttons */
+button {
+    font-size: 17px;
+    font-family: "Trebuchet MS", sans-serif;
+    background-color: #00bcd4; /* Button color */
+    color: #353535;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+/* Button hover effects */
+button:hover {
+    background-color: #008c9e; /* Darker color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Saved Configurations Section */
+h3 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 24px;
+    color: #353535;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Table styling */
+table {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse; /* No spacing between table cells */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+/* Table headers */
+th {
+    color: #ffffff;
+    background-color: #353535;
+    font-family: "Trebuchet MS", sans-serif;
+    padding: 15px;
+    text-align: center;
+    font-size: 17px;
+}
+
+/* Table body */
+tbody {
+    background-color: #ffffff; /* Light background for table rows */
+}
+
+td {
+    font-family: "Trebuchet MS", sans-serif;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Row separator */
+}
+
+/* Action buttons in table */
+tbody button {
+    background-color: #00bcd4;
+    color: #ffffff;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+tbody button:hover {
+    background-color: #008c9e; /* Darker color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Reduce padding and font sizes for smaller screens */
+    h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-size: 14px;
+        width: 150px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 200px; /* Adjust width for smaller screens */
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        padding: 8px 15px; /* Smaller padding for buttons on smaller screens */
+    }
+}

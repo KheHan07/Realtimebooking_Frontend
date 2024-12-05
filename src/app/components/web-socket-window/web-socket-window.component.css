@@ -1,0 +1,70 @@
+/* src/app/components/web-socket-window/web-socket-window.component.css */
+
+/* Container for the entire WebSocket window */
+.websocket-window {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 20px auto; /* Center the container horizontally */
+  max-height: 400px;
+  max-width: 80%; /* Set max width for responsiveness */
+  width: 1100px; /* Set consistent width */
+  overflow-y: auto;
+  background-color: #f9f9f9; /* Light background color for better readability */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Centering the h3 element */
+.websocket-window h3 {
+  margin-top: 0px;
+  text-align: center;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  font-size: 24px;
+  color: #353535; /* Matches overall color scheme */
+}
+
+/* Live data container for scrollable data */
+.live-data-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* List container within live data */
+.live-data-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for each individual list item */
+.live-data-container li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  background-color: #ffffff; /* Background color for each message */
+  border-radius: px; /* Add slight rounding to list items */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover effect for list items to emphasize readability */
+.live-data-container li:hover {
+  background-color: #f0f0f0; /* Light grey when hovering */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Reduce padding and font sizes for smaller screens */
+  .websocket-window {
+      padding: 10px;
+      width: 90%; /* Make width more adaptive to smaller screens */
+  }
+
+  .live-data-container li {
+      padding: 8px;
+  }
+
+  /* Centering the h3 on smaller screens */
+  .websocket-window h3 {
+      font-size: 20px; /* Adjust title font size for smaller screens */
+  }
+}
