@@ -3,15 +3,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { WebSocketWindowComponent } from '../web-socket-window/web-socket-window.component';
+import { TicketDisplayComponent } from '../ticket-display/ticket-display.component';
 
 @Component({
   selector: 'app-control-panel',
   standalone: true,
-  imports: [FormsModule, CommonModule, WebSocketWindowComponent],
+  imports: [FormsModule, CommonModule, WebSocketWindowComponent, TicketDisplayComponent],
   templateUrl: './control-panel.component.html',
   styleUrls: ['./control-panel.component.css'] 
 })
-
 export class ControlPanelComponent {
   numberOfVendors: number = 2;
   numberOfBuyers: number = 3;
@@ -65,6 +65,19 @@ export class ControlPanelComponent {
         },
         error: (err) => {
           alert('Failed to stop system: ' + err.message);
+        },
+      });
+  }
+
+  resetSystem() {
+    this.http
+      .post('http://localhost:8080/ticket/reset', {}, { responseType: 'text' })
+      .subscribe({
+        next: (response) => {
+          alert('System reset successfully!');
+        },
+        error: (err) => {
+          alert('Failed to reset system: ' + err.message);
         },
       });
   }

@@ -76,10 +76,8 @@ button:hover {
 app-web-socket-window {
     margin-top: 20px;
     display: block; /* Display the WebSocket window as a block element */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for emphasis */
     padding: 20px;
     border-radius: 10px;
-    background-color: #ffffff; /* Light background for the WebSocket window */
     color: #353535;
 }
 

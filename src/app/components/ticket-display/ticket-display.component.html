@@ -1,0 +1,18 @@
+<div class="ticket-display-container">
+    <h3>Ticket Statistics</h3>
+    <div class="stats-grid">
+      <div class="stat-block" *ngFor="let v of vendorStats">
+        <h4>Vendor {{v.vendorId}}:</h4>
+        <p>Tickets Released: {{ v.ticketsReleased }}</p>
+      </div>
+      <div class="stat-block customers">
+        <h4>Customers:</h4>
+        <p>Tickets Bought: {{ customersTotalBought }}</p>
+      </div>
+      <div class="stat-block total-sold">
+        <h4>Total Tickets Sold Out:</h4>
+        <p>{{ totalTicketsSoldOut }}</p>
+      </div>
+    </div>
+  </div>
+  
