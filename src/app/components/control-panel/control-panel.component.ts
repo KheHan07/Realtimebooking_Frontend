@@ -48,7 +48,6 @@ export class ControlPanelComponent {
       })
       .subscribe({
         next: (response) => {
-          alert('System started successfully!');
         },
         error: (err) => {
           alert('Failed to start system: ' + err.message);

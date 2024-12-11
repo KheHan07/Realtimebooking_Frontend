@@ -118,14 +118,14 @@ h1 {
   padding: 8px 5%; /* Padding for more spacious navbar */
   margin-left: 100px;
   margin-right: 100px;
-  border-radius: 50px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   color: #ffffff; /* Default text color for the navbar */
 }
 
 /* Logo Styling */
 .logo {
-  padding-top: 8px;
+  padding-top: 3px;
   font-family: "Trebuchet MS", sans-serif;
   color: #ffffff;
   font-weight: bold;
@@ -135,7 +135,7 @@ h1 {
 
 /* Navigation Links Styling */
 .nav-links {
-  margin-top: 5px;
+  margin-top: 0px;
   display: flex;
   gap: 10px; /* Spacing between navigation links */
 }
@@ -147,7 +147,7 @@ h1 {
   color: #353535;
   border: none;
   padding: 10px 25px;
-  border-radius: 25px;
+  border-radius: 15px;
   text-decoration: none; /* Remove underline */
   font-size: 20px; /* Font size for the links */
   font-weight: bold; /* Bold text for emphasis */
